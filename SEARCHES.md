@@ -25,3 +25,7 @@ For exploring:
 p="(similar to|like|mix of) .{3,10} and .*? "; perl -ne "print if
  s/($p)/\*\*\*\U\1\E\*\*\*/g" <(bzcat data/movies.bz2 | tr "[:upper:]" "[:l
 ower:]") | less 
+
+# Pull out sentences
+
+bzgrep -Po "(?<=(\.|\:|\!|\?) ).{0,120}?-esque.*?(\.|\!|\?)" x-ian_x-esque.txt.bz2 | bzip2 -c >esque-sentences.bz2 
