@@ -1,5 +1,5 @@
-# Counts of first 100k occurances of [A-Z]\w* ?-like terms
-# (Capitalized words)
+# Counts of first 100k occurances of \w* ?-like terms,
+# filters to capitalized words
 # Cut off at 10 occurances
    1051 Christ-like
     604 Bond-like
