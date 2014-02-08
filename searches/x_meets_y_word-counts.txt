@@ -1,0 +1,293 @@
+# perl -pe "s: meets :\n:g" ../searches/x_meets_y.txt | sort | uniq -c | \
+# sort -n -r >../searches/x_meets_y_word-counts.txt
+# Person names manually weeded
+# Filtered at >15 occurrances
+# Some missed films inferred. For example, 'Lord' was assumed to be 'Lord of
+# the Rings'
+# Possible problems: redundancy in the dataset
+    240 Indiana Jones
+    163 Alien
+    151 James Bond
+    133 Jack
+    126 Batman
+    108 Rambo
+    107 Rocky
+    100 Monty Python
+     97 Bond
+     94 Hitchcock
+     93 Star Wars
+     88 Kill Bill
+     86 Pulp Fiction
+     84 Frankenstein
+     83 Predator
+     78 Evil Dead
+     78 Charles
+     77 Dracula
+     68 The Matrix
+     67 Mad Max
+     66 Shakespeare
+     64 Lord of the Rings
+     60 Matrix
+     60 Aliens
+     56 Carrie
+     55 Braveheart
+     53 Die Hard
+     52 Bollywood
+     51 Hollywood
+     51 Beowulf
+     50 MTV
+     50 Caesar
+     49 Wonderland
+     49 Jesus
+     49 Hostel
+     48 Blair Witch
+     47 Blade Runner
+     46 Juliet
+     46 Buffy
+     46 Blade
+     45 Mission Impossible
+     45 Miami Vice
+     45 Harry Potter
+     44 The Governor
+     44 Godzilla
+     43 Scooby Doo
+     43 CSI
+     43 Blair Witch Project
+     42 Scarface
+     42 Pretty Woman
+     42 Crouching Tiger
+     40 True Lies
+     40 Independence Day
+     39 Deliverance
+     38 Speed
+     38 Bruce Lee
+     37 Woody Allen
+     37 Psycho
+     37 Goodfellas
+     37 DIE HARD
+     37 Cloverfield
+     35 Popeye
+     35 National Lampoon
+     35 Jurassic Park
+     35 Ingmar Bergman
+     35 Disney
+     35 Conan
+     34 Resident Evil
+     34 Peter Pan
+     34 Dawn
+     34 Darth Vader
+     33 Zorro
+     33 Michael Jackson
+     33 Frida
+     33 American Pie
+     32 Star Trek
+     32 Smith
+     32 Groundhog Day
+     32 X Files
+     31 Looney Tunes
+     31 Ed Wood
+     31 Doctor Who
+     31 Beverly Hills
+     30 WAR OF THE WORLDS
+     30 TOP GUN
+     30 Lambs
+     30 Kirk
+     30 Gladiator
+     30 Death Wish
+     30 David Lynch
+     30 Dances With Wolves
+     29 Memento
+     29 George Romero
+     28 Walt Disney
+     28 Tennessee Williams
+     28 Seinfeld
+     28 Saw
+     28 Hitch
+     27 The Godfather
+     27 Rocky Horror
+     27 New York
+     27 Metropolis
+     27 Close Encounters
+     27 Clockwork Orange
+     27 American Gladiators
+     26 The Thing
+     26 Texas Chainsaw Massacre
+     26 SEA HUNT
+     26 Ray
+     26 Quentin Tarantino
+     26 Playboy
+     26 Pitch Black
+     26 Picard
+     26 Paula
+     26 Not Rambo
+     26 Lethal Weapon
+     26 Lady Lyndon
+     26 Jackass
+     26 Commando
+     26 CLOSE ENCOUNTERS
+     26 Castaway
+     49 Invasion of the Body Snatchers
+     25 Forrest Gump
+     25 Austin Powers
+     24 Tarantino
+     24 Spaghetti Western
+     24 Sinbad
+     24 Se7en
+     24 Maggie
+     24 Living Dead
+     24 Kitty
+     24 Holden
+     24 Goonies
+     24 Film Noir
+     24 Exorcist
+     23 Xena
+     23 Tarzan
+     23 Pocahontas
+     23 Midnight Run
+     23 Brad Pitt
+     22 Vin Diesel
+     22 Terminator
+     22 Space Odyssey
+     22 Seinfeld
+     22 Saving Private Ryan
+     22 Desperate Housewives
+     21 Tomb Raider
+     21 The Crow
+     21 South Park
+     21 Road Trip
+     21 Fatal Attraction
+     21 Dark City
+     20 Tim Burton
+     20 The Shining
+     20 The Ring
+     20 Spartacus
+     50 Shaun of the Dead
+     50 Night of the Living Dead
+     20 Robin Hood
+     20 Pinhead
+     20 Notting Hill
+     20 Muppets
+     20 Leni Riefenstahl
+     20 Keystone Cops
+     20 John Carpenter
+     20 Jackie Chan
+     20 Dirty Harry
+     19 Willy Wonka
+     19 Twilight
+     19 Top Gun
+     19 The Silence
+     19 The Goonies
+     19 Seven Samurai
+     19 SciFi
+     19 Jerry Springer
+     19 Home Alone
+     19 Fargo
+     19 Cinderella
+     19 Amelie
+     19 Alfred Hitchcock
+     18 Trainspotting
+     18 Traditional Film Noir
+     18 The Twilight Zone
+     18 The Office
+     18 Stand By Me
+     18 Platoon
+     18 Fellini
+     18 Escape From New York
+     18 Comic Violence
+     18 Cheech and Chong
+     18 Casablanca
+     37 Dr. Zhivago
+     17 Scream
+     17 Red Dragon
+     17 Rear Window
+     17 Manhunter
+     17 Eyes Wide Shut
+     17 Asian Martial Art
+     17 ALIEN
+     16 XXX
+     16 The Batman
+     16 Team America
+     16 Suburbia
+     16 Stephen King
+     16 Spinal Tap
+     16 Spike Jonze
+     16 Soren Keirkegaard
+     16 Sky Captain
+     16 Shaft
+     16 Roy
+     16 Pinocchio
+     16 New Testament
+     16 Magnum P.I.
+     16 Las Vegas
+     16 Galaxy Quest
+     16 Fight Club
+     16 English Patient
+     16 Elektra
+     16 Edward Scissorhands
+     16 EDGER
+     16 Dumbo
+     16 Captain Kangaroo
+     15 West Side Story
+     15 Vermeer
+     15 The Waco Kid
+     15 The Road Warrior
+     15 THE NAKED LUNCH
+     15 Texas
+     15 Solitaire
+     15 Snipes
+     15 Sitcom Comedy
+     15 Sid
+     15 Samantha
+     15 Saladin
+     15 Sabrina
+     15 Ripley
+     15 Place
+     15 ON THE ROAD
+     15 Oliver
+     15 NIGHT OF THE LIVING DEAD
+     15 Nicholson
+     15 Mozart
+     15 Monte Python
+     15 Monroe
+     15 Miss Sole Proprietor
+     15 Mexico
+     15 Melody
+     15 McConaughey
+     15 Mary Jane
+     15 Martins
+     15 Manny
+     15 Madman
+     15 Lois
+     15 List
+     15 Lime
+     15 Kubrick
+     15 Kathleen Kelly
+     15 John Smith
+     15 Joe Fox
+     15 Jake
+     15 Jackey Chan
+     15 ILM Demo Reel
+     15 Howard
+     15 Hong Kong Action
+     15 Highlander
+     15 Gundam
+     15 Garrigan
+     15 Freddy
+     15 Frank Capra
+     15 Final Destination
+     15 ET
+     15 Dick Tracy
+     15 Demon Seed
+     15 Delbert Grady
+     15 Deacon Frost
+     15 Damned
+     15 Colonel Klink
+     15 Chain Store
+     15 Cary Grant
+     15 Bugs Bunny
+     15 Barbara
+     15 Bailin
+     15 Animal House
+     15 Amy
+     15 Amin
+     15 Ali
