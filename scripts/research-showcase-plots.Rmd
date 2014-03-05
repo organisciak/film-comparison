@@ -1,0 +1,22 @@
+Research Showcase plots
+========================================================
+
+```{r}
+library("data.table")
+library("ggplot2")
+```
+
+## Example: Super 8
+How often are other films discussed in reviews about Super 8?
+
+```{r}
+films <- fread(input="examples/stats/super8-film-counts.csv")
+ggplot(films[total.matches > 5], aes(x=factor(movie), y=total.matches))+geom_bar(stat="identity")+theme_minimal()
+```
+
+You can also embed plots, for example:
+
+```{r fig.width=7, fig.height=6}
+plot(cars)
+```
+
