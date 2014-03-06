@@ -2,8 +2,31 @@ Research Showcase plots
 ========================================================
 
 ```{r}
-library("data.table")
-library("ggplot2")
+require("data.table")
+require("ggplot2")
+require("wordcloud")
+require(RColorBrewer)
+```
+
+## Archetypes
+What films reccur often?
+
+First, films we see in the X meets Y pattern:
+
+```{r}
+films <-fread(input="../searches/x_meets_y_word-counts.txt", skip=8)
+# Split into two clouds of 50 words
+setA = 1:50*2#2*1:(nrow(films)/2)
+setB = 1:50*2-1#2*1:(nrow(films)/2)-1
+wordcloud(films[setA,film], films[setA,count], scale=c(3.6,.1), random.order=FALSE, rot.per=.15, colors=brewer.pal(8,"Dark2"))
+wordcloud(films[setB,film], films[setB,count], scale=c(3.6,.1), random.order=FALSE, rot.per=.15, colors=brewer.pal(8,"Dark2"))
+```
+
+An {X} twist
+```{r}
+films <-fread(input="../searches/a_X_twist-counts.txt")
+films[, twist:=gsub("a | twist", "", twist)]
+ggplot(films[1:10], aes(x=factor(c("Twists")), y=count, fill=twist))+geom_bar(stat="identity")+theme_minimal()+ geom_text(aes(label = twist, size = count), hjust = 0.5, vjust = 3, position =     "stack")+ scale_size(range=c(3,6))
 ```
 
 ## Example: Super 8
