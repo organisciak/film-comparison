@@ -1,47 +1,32 @@
-     70 Hitchcock-ian
-     41 Welles-ian
-     24 Spielberg-ian
-     16 Dick-ian
-     12 Seuss-ian
-     12 Dickens-ian
-     12 Christ-ian
-     10 x-ian
-      9 Brazil-ian
-      9 Bond-ian
-      9 Bass-ian
-      8 Stoppard-ian
-      8 Seinfeld-ian
-      8 Rice-ian
-      8 Lynch-ian
-      8 ATL-ian
-      7 Kubrik-ian
-      6 Lucas-ian
-      6 Kubrick-ian
-      5 Cronenberg-ian
-      4 Wood-ian
-      4 Moses-ian
-      4 KILL-ian
-      4 Heidegger-ian
-      4 Anderson-ian
-      3 Wells-ian
-      3 Sondheim-ian
-      3 Shore-ian
-      3 Reich-ian
-      3 Kirk-ian
-      3 Gerstalt-ian
-      3 Blair-ian
-      2 tibalt-ian
-      2 Russell-ian
-      2 Rousseau-ian
-      2 Raft-ian
-      2 Moore-ian
-      2 Cat-ian
-      2 Brooks-ian
-      1 Wilde-ian
-      1 Russ-ian
-      1 Rand-ian
-      1 holmes-ian
-      1 church-ian
-      1 Badiou-ian
-      1 Amazon-ian
-      1 Adams-ian
+70	Hitchcock-ian
+41	Welles-ian
+24	Spielberg-ian
+16	Dick-ian
+12	Seuss-ian
+12	Dickens-ian
+12	Christ-ian
+10	x-ian
+9	Brazil-ian
+9	Bond-ian
+9	Bass-ian
+8	Stoppard-ian
+8	Seinfeld-ian
+8	Rice-ian
+8	Lynch-ian
+8	ATL-ian
+7	Kubrik-ian
+6	Lucas-ian
+6	Kubrick-ian
+5	Cronenberg-ian
+4	Wood-ian
+4	Moses-ian
+4	KILL-ian
+4	Heidegger-ian
+4	Anderson-ian
+3	Wells-ian
+3	Sondheim-ian
+3	Shore-ian
+3	Reich-ian
+3	Kirk-ian
+3	Gerstalt-ian
+3	Blair-ian
