@@ -16,7 +16,7 @@ def main():
     current_user = None
     title_parser = TitleParser()
 
-    for line in args.infile.readlines():
+    for line in args.infile:
         line = line.rstrip()
         
         # Check if a new film has been added
