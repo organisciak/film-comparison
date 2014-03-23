@@ -13,6 +13,7 @@ def main():
     args = parser.parse_args()
 
     current_film = None
+    current_user = None
     title_parser = TitleParser()
 
     for line in args.infile.readlines():
@@ -21,12 +22,16 @@ def main():
         # Check if a new film has been added
         if line[0:18] == r"product/productId:":
             current_film = line[19:]
+        if line[0:14] == r"review/userId:":
+            current_user = "%s/%s" % (current_film, line[15:])
         # Find likely titles in review
         elif line[0:12] == r"review/text:":
             review = line[13:]
             titles = title_parser.parse(review)
             if len(titles) > 0:
-                print titles
+                tokens = [re.sub(' ', '_', title) for title in titles]
+                out = "%s\t%s\t%s\n" % (current_user, current_film, " ".join(tokens))
+                args.outfile.write(out)
 
 
 class TitleParser:
