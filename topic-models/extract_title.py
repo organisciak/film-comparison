@@ -9,6 +9,7 @@ def main():
                         default=sys.stdin)
     parser.add_argument('outfile', nargs='?', type=argparse.FileType('w'),
                         default=sys.stdout)
+    parser.add_argument('--no-singles', action='store_true')
 
     args = parser.parse_args()
 
@@ -27,7 +28,7 @@ def main():
         # Find likely titles in review
         elif line[0:12] == r"review/text:":
             review = line[13:]
-            titles = title_parser.parse(review)
+            titles = title_parser.parse(review, args.no_singles)
             if len(titles) > 0:
                 tokens = [re.sub(' ', '_', title) for title in titles]
                 out = "%s\t%s\t%s\n" % (current_user, current_film, " ".join(tokens))
@@ -40,35 +41,52 @@ class TitleParser:
     # Another sentence, with up to 2 lowercase articles and inconjugates
     # allowed in the middle, but not beginning or end
     TITLE_MATCH = re.compile('''((?<!(\.|\!|\?) )(([A-Z][\w']+|I)(( (the|on|from|to|and|of|a)){0,2}( [A-Z][\w']+|I)+)*))(?=[\s\.\!\?$])''')
+    TITLE_MATCH_LONGER = re.compile('''((?<!(\.|\!|\?) )(([A-Z][\w']+|I)(( (the|on|from|to|and|of|a)){0,2}( [A-Z][\w']+|I)+)+))(?=[\s\.\!\?$])''')
     
     def __init__(self):
         stoplist = stopwords.words('english')
 
         # add custom words to stoplist
-        stoplist += ['it\'s', 'i\'ve', 'also']
+        stoplist += ['it\'s', 'i\'ve', 'also', 'i\'ll', 'let\'s']
+        film_stoplist = ['hd dvd', 'this dvd', 'the dvd', 'dolby digital']
+        stoplist += film_stoplist
 
         names_file = open('/data/datasets/reference/english-names.txt')
-        names = [name.strip().lower() for name in names_file.readlines()]
+        self.names = [name.strip().lower() for name in names_file.readlines()]
 
         ## Add person names to stoplist
-        stoplist += names
+        stoplist += self.names
         self.stoplist = stoplist
 
     # Extra filtering of false positives, by heristics
-    def filter(self, match):
+    def filter(self, match, min_length=4):
         # Remove stoplist
         if match.lower() in self.stoplist:
             return None
         #Remove short words. 
-        if len(match) <= 3:
+        if len(match) < min_length:
             return None
+
         return match
 
-    def parse(self, review):
-        titles_raw = self.TITLE_MATCH.findall(review)
+    def match_first_names(self, match):
+        first_word = match.split(" ")[0]
+        if first_word.lower() in self.names:
+            return None
+        else:
+            return match
+
+    def parse(self, review, no_singles=True):
+        if no_singles is True:
+            titles_raw = self.TITLE_MATCH_LONGER.findall(review)
+        else:
+            titles_raw = self.TITLE_MATCH.findall(review)
         titles = [title[0] for title in titles_raw]
         # Extra step for false positives
         titles = [self.filter(title) for title in titles]
+        titles = [title for title in titles if title]
+        # Strip out matches that have a proper first name
+        titles = [self.match_first_names(title) for title in titles]
         titles = [title for title in titles if title]
         return titles
 
