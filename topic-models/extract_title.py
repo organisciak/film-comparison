@@ -6,10 +6,13 @@ from nltk.corpus import stopwords
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('infile', nargs='?', type=argparse.FileType('r'),
-                        default=sys.stdin)
+                        default=sys.stdin,
+                        help="Input file of Amazon review. Default is stdin.")
     parser.add_argument('outfile', nargs='?', type=argparse.FileType('w'),
-                        default=sys.stdout)
-    parser.add_argument('--no-singles', action='store_true')
+                        default=sys.stdout, 
+                        help="Output file for found titles. Default is stdout.")
+    parser.add_argument('--no-singles', action='store_true', 
+                        help="Option to ignore single word matches. This option increases precision while losing recall.")
 
     args = parser.parse_args()
 
