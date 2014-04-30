@@ -1,0 +1,3 @@
+The files in this folder represent a 100k random files*, split into multiple pieces in order to be able to parallelize grepping.
+
+* The 100k files were "randomly" chosen from the first 500k of a sorted list of the full 7m records, meaning it is only semi-random but functionally so.
