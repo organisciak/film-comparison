@@ -1,0 +1,12 @@
+
+This matches capital words phrases, except those at the start of a sentence, allowing for a selected list of lowercase articles or short conjugates, provided that there do not occur at the start and end of the phrase and only happen in strings of up to 2 between capitalized words. It doesn't match colons or numbers, but does get apostrophes.
+
+(?<!(\.|\!|\?) )([A-Z][\w']+|I)(( (the|on|from|to|and|of|a)){0,2} ([A-Z][\w']+|I)*)*
+
+It matches the examples in this sentence properly, with two false positives (single word capitalized words):
+
+Each word in a film title takes an initial capital, except for articles ("a", "an", "the"), the word "to" as part of an infinitive, prepositions, or coordinating conjunctions that are four letters or shorter (e.g., "on", "from", "and", "with"), unless they begin or end a title or subtitle. For example: Angels and Virgins, End of the Spear, Failure to Launch, I Am a Fugitive from a Chain Gang. See Wikipedia:Naming conventions (capitalization). Film titles, like the titles of books and other works of art, are always italicized.
+
+To export as a shell variable, 
+
+export TITLE=\(\?\<\!\(\\\.\|\\\!\|\\\?\)\ \)\(\[\A\-\Z\]\[\\\w\'\]\+\|\I\)\(\(\ \(\t\h\e\|\o\n\|\f\r\o\m\|\t\o\|\a\n\d\|\o\f\|\a\)\)\{\0\,\2\}\ \(\[\A\-\Z\]\[\\\w\'\]\+\|\I\)\*\)\*
