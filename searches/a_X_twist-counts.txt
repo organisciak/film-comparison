@@ -1,29 +1,28 @@
 count	twist
-31	a GREAT twist
+31	a great twist
 29	a Tarantino twist
 25	a French twist
 24	a Tim Burton twist
+24	a Hitchcockian twist
 21	a Kubrick twist
 17	a Lynchy twist
 17	a British twist
 16	a Star Trek twist
 16	a Japanese twist
 16	a James Bond twist
-16	a HUGE twist
+16	a huge twist
 15	a Scorsese twist
 15	a Christmas twist
 14	a Muppet twist
 13	a Drunken twist
 13	a David Fincheresque twist
 13	a Chrismasy twist
-12	a Shakespear twist
-12	a Hitchcokian twist
-12	a Hitchcockian twist
+12	a Shakespearian twist
 11	a Shyamalan twist
 11	a Kryptonite twist
 9	a Wes Craven twist
 9	a Monty Python twist
-9	a MAJOR twist
+9	a major twist
 9	a Latin twist
 9	a Hollywood twist
 8	a TWILIGHT ZONE twist
