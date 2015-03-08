@@ -1,0 +1,1 @@
+mallet-2.0.7/bin/mallet train-topics --input tags.mallet --num-topics 70 --output-topic-keys topic_keys.txt --optimize-interval 20 --num-iterations 1000 --output-doc-topics topics.txt --output-state tag-topic-state.gz --inferencer-filename tag.inferencer
